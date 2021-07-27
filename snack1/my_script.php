@@ -49,7 +49,10 @@ var_dump($gir1_len);
 <body>
     <!-- Stampiamo a schermo tutte le partite con questo schema: Olimpia Milano - Cantù | 55-60 -->
 
-<?php for($i = 0; $i <= $gir1_len; $i++){?>
+    <?php /*  for($i = 0; $i < $gir1_len; $i++){ ?>
+
+    
+
     <p>
         <span>
             <?php echo $girone1[$i]["casa"]?>
@@ -63,10 +66,22 @@ var_dump($gir1_len);
             <?php echo $girone1[$i]["pti_casa"]?>-<?php echo $girone1[$i]["pti_ospite"]?>
         </span>
     </p>
-<?php } ?>
 
 
+<?php   } */ ?>
 
+<!-- CON FOREACH -->
+<?php
+
+foreach($girone1 as $partita){
+    var_dump( $partita);
+    foreach($partita as $el){
+        echo $el;
+    }
+}
+
+
+?>
 
 
 </body>
